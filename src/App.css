@@ -1,0 +1,63 @@
+
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 300px; /* altura fixa para garantir espaço para o efeito */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  border-radius: 0.5rem; /* compatível com Tailwind rounded-lg */
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Suavizar a transição do carrossel (opcional) */
+.carousel-container {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* index.css ou App.css */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* App.css */
+.custom-radio {
+  accent-color: #9333ea; /* Roxo */
+}
+
+.confirm-btn {
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 0 6px;
+  border-radius: 4px;
+  color: #9333ea;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.confirmed {
+  background-color: #9333ea;
+  color: white;
+}
