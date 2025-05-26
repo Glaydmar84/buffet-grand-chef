@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import CardCarousel from './components/CardCarousel';
 import Footer from './components/Footer'; // ✅ Importa o Footer corretamente
+import './responsive.css';
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
       </div>
 
       {/* Rodapé fixado no final da página */}
-      <Footer />
+      <div className="">
+        <Footer />
+      </div>
     </div>
   );
 }

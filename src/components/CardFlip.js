@@ -47,7 +47,7 @@ const FlipCard = ({ data }) => {
     <div className="bg-[#fffaf4]/01 flex items-center justify-center p-2 h-[373px] rounded-lg shadow-md">
       <div
         className="flip-card w-full max-w-md"
-        onMouseEnter={() => !isMobile && setFlipped(true)}
+        // onMouseEnter={() => !isMobile && setFlipped(true)}
         onMouseLeave={() => !isMobile && setFlipped(false)}
         onClick={() => isMobile && setFlipped(!flipped)}
       >
@@ -55,23 +55,23 @@ const FlipCard = ({ data }) => {
 
           {/* FRONT */}
           <div className="flip-card-front bg-[#fffaf4]/50 border-4 border-purple-300 shadow-lg rounded-lg p-4 h-[310px] flex flex-col justify-between">
-            <div className="w-48 -ml-1 bg-purple-100 text-purple-800 text-sm font-bold py-1 px-3 rounded shadow-sm text-center">
+            <div className="  w-48 w-60 -ml-1 bg-purple-100 text-purple-800 text-sm font-bold py-1 px-3 rounded shadow-sm text-center">
               {data.title}
             </div>
             {/* imagem  */}
-            <div className="w-[177px] h-[167px] flex items-center justify-center">
+            <div className="w-full h-[167px] flex mr-1 items-center justify-center">
               <img
                 src={data.image}
                 alt={data.title}
-                className="w-[170px] h-full object-cover border-2 border-white-500 rounded-lg"
+                className="w-[270px] h-[170px]  object-fit border-2 border-white-500 rounded-lg"
               />
             </div>
 
-            <p className="bg-pink-100 text-purple-900 mb-6 text-md text-center w-48 font-bold rounded shadow-sm">
+            <p className="bg-pink-100   text-purple-900 mb-6 text-md text-center w-60  font-bold rounded shadow-sm">
               {data.serves}
             </p>
 
-            <div className="absolute mt-[247px] left-0 w-[90px] ml-3 px-2 bg-purple-200 text-purple-800 text-sm font-bold rounded shadow-sm text-center">
+            <div className="absolute mt-[247px]  w-[112px] ml-32 px-2 bg-purple-200 text-purple-800 text-sm font-bold rounded shadow-sm text-center">
               <span className="text-yellow-700 text-sm px-3 flex items-center gap-1 justify-center">
                 <strong>{data.rating} ★</strong>
               </span>
@@ -82,7 +82,7 @@ const FlipCard = ({ data }) => {
                 e.stopPropagation();
                 setFlipped(true);
               }}
-              className="absolute mt-[247px] right-0 w-[90px] mr-3 px-2 bg-green-200 text-green-800 text-sm font-bold rounded shadow-sm text-center hover:bg-green-300 transition duration-200"
+              className="absolute mt-[247px]  w-[112px] mr-3 px-2 bg-green-100 text-green-800 text-sm font-bold rounded shadow-sm text-center hover:bg-green-300 transition duration-200"
             >
               Detalhes
             </button>
@@ -120,7 +120,7 @@ const FlipCard = ({ data }) => {
 
             {/* ✅ Legenda acima da lista */}
             <div className="text-center mb-1">
-              <p className="w-48 bg-white text-gray-900 text-sm font-bold  px-3 rounded shadow-sm text-center">
+              <p className="w-62 bg-white text-gray-900 text-sm font-bold  px-3 rounded shadow-sm text-center">
                 {categoryLabels[currentCategory] || "Itens do pacote"}
               </p>
             </div>
@@ -165,7 +165,7 @@ const FlipCard = ({ data }) => {
 
             {/* Buttons */}
 
-            <p className="bg-yellow-100 text-purple-900 text-md text-center ml-1 mt-10 w-48 font-bold rounded shadow-sm">
+            <p className="bg-yellow-100 text-purple-900 text-md text-center ml-1 mt-10 w-60 font-bold rounded shadow-sm">
               Valor: {data.price}
             </p>
             <div className="flex gap-3 self-center mt-auto">
