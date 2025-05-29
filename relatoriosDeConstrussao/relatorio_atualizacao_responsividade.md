@@ -34,5 +34,5 @@ Este relatório documenta as últimas atualizações e melhorias realizadas no d
 - ✔️ O fundo do site foi mantido simples, com possibilidade de melhorias futuras, como troca dinâmica de imagens (em análise).
 
 
-## 📂 Estrutura Atual dos Arquivos
+
 
