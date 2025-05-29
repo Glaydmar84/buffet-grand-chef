@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import FlipCard from './CardFlip';
 
-
+ 
 const CardCarousel = () => {
   const cardsData = [
     {
@@ -109,7 +109,7 @@ const CardCarousel = () => {
       },
     },
   ];
-
+ 
   return (
     <div className=" carousel-container w-full h-full overflow-hiden flex flex-col items-center">
       <Swiper
@@ -126,6 +126,7 @@ const CardCarousel = () => {
         }}
         className="w-full max-w-[1500px] px-6"
       >
+         
         {cardsData.map((data) => (
           <SwiperSlide key={data.id}>
             <div className="flex justify-center">
@@ -136,8 +137,10 @@ const CardCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+    
     </div>
   );
 };
 
 export default CardCarousel;
+

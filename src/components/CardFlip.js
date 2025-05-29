@@ -126,46 +126,47 @@ const FlipCard = ({ data }) => {
             </div>
 
             {/* Items List */}
-            <ul className="space-y-2">
-              {data.items[currentCategory].map((item) => {
-                const id = `${currentCategory}-${item.nome.replace(/\s+/g, '').toLowerCase()}`;
-                const isRadio = currentCategory.toLowerCase() === "bolos";
+            <div className="border-2 border-white rounded-lg p-2">
+              <ul className="  space-y-1 flex flex-col h-full justify-between">
+                {data.items[currentCategory].map((item) => {
+                  const id = `${currentCategory}-${item.nome.replace(/\s+/g, '').toLowerCase()}`;
+                  const isRadio = currentCategory.toLowerCase() === "bolos";
 
-                return (
-                  <li
-                    key={id}
-                    className="flex justify-between items-center bg-white p-1 mt-2 rounded shadow-sm"
-                  >
-                    <div className="flex items-center">
-                      {isRadio ? (
-                        <>
-                          <input
-                            type="radio"
-                            name={currentCategory}
-                            id={id}
-                            value={item.nome}
-                            className="custom-radio"
-                            onChange={() => handleRadioChange(id)}
-                          />
-                          <label htmlFor={id} className="radio-label ml-2 text-gray-700">
-                            {item.nome}
-                          </label>
-                        </>
-                      ) : (
-                        <span className="text-gray-700">{item.nome}</span>
-                      )}
-                    </div>
-                    <span className="text-sm text-emerald-600 font-medium">
-                      {item.quantidade}
-                    </span>
-                  </li>
-                );
-              })}
-            </ul>
-
+                  return (
+                    <li
+                      key={id}
+                      className="flex justify-between items-center bg-white p-1 mt-2 rounded shadow-sm"
+                    >
+                      <div className="flex items-center">
+                        {isRadio ? (
+                          <>
+                            <input
+                              type="radio"
+                              name={currentCategory}
+                              id={id}
+                              value={item.nome}
+                              className="custom-radio"
+                              onChange={() => handleRadioChange(id)}
+                            />
+                            <label htmlFor={id} className="radio-label ml-2 text-gray-700">
+                              {item.nome}
+                            </label>
+                          </>
+                        ) : (
+                          <span className="text-gray-700">{item.nome}</span>
+                        )}
+                      </div>
+                      <span className="text-sm text-emerald-600 font-medium">
+                        {item.quantidade}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
             {/* Buttons */}
 
-            <p className="bg-yellow-100 text-purple-900 text-md text-center ml-1 mt-10 w-60 font-bold rounded shadow-sm">
+            <p className="absolute bg-yellow-100 text-purple-900 text-md text-center ml-1 mt-56 w-60 font-bold rounded shadow-sm">
               Valor: {data.price}
             </p>
             <div className="flex gap-3 self-center mt-auto">
