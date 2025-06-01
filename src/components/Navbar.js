@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import LoginModal from './LoginModal';
 import RegisterModal from './RegisterModal';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
-  const [isLoginOpen, setIsLoginOpen] = useState(false); // <-- Adicionado
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   return (
     <nav className="mt-4 flex items-center justify-between px-6 py-4 bg-gray-800 bg-opacity-70">
@@ -27,12 +28,12 @@ export default function Navbar() {
 
       {/* Menu Desktop */}
       <div className="hidden md:flex items-center space-x-6 mr-4">
-        <a href="/produtos" className="text-white hover:underline">
+        <Link to="/produtos" className="text-white hover:underline">
           Produtos
-        </a>
-        <a href="/pacotes" className="text-white hover:underline">
+        </Link>
+        <Link to="/pacotes" className="text-white hover:underline">
           Personalizar Pacotes
-        </a>
+        </Link>
 
         <button
           onClick={() => setIsLoginOpen(true)}
@@ -96,12 +97,20 @@ export default function Navbar() {
           >
             Cadastro
           </button>
-          <a href="/produtos" className="block text-purple-800 hover:underline">
+          <Link
+            to="/produtos"
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-purple-800 hover:underline"
+          >
             Produtos
-          </a>
-          <a href="/pacotes" className="block text-purple-800 hover:underline">
+          </Link>
+          <Link
+            to="/pacotes"
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-purple-800 hover:underline"
+          >
             Personalizar Pacote
-          </a>
+          </Link>
         </div>
       )}
 
@@ -116,7 +125,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
-
-

@@ -27,8 +27,8 @@ export default function RegisterModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-      <div className="bg-gray-900 rounded-lg p-8 shadow-lg w-full max-w-md relative">
+    <div className="fixed inset-0  flex items-center justify-center z-50 bg-black bg-opacity-50">
+      <div className="bg-gray-900 border border-white rounded-lg p-8 shadow-lg w-full max-w-md relative">
 
         {/* Botão de fechar */}
         <button
@@ -109,7 +109,7 @@ export default function RegisterModal({ isOpen, onClose }) {
             Cadastrar
           </button>
         </form>
-
+        <hr className=" mt-8"></hr>
         {/* Ícones Sociais */}
         <p className="telative text-center text-white mt-4">
           Ou se preferir cadastre-se com

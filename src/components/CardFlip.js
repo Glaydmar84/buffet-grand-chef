@@ -126,7 +126,7 @@ const FlipCard = ({ data }) => {
             </div>
 
             {/* Items List */}
-            <div className="border-2 border-white rounded-lg p-2">
+            <div className="border-2 border-white mt-1 rounded-lg p-1">
               <ul className="  space-y-1 flex flex-col h-full justify-between">
                 {data.items[currentCategory].map((item) => {
                   const id = `${currentCategory}-${item.nome.replace(/\s+/g, '').toLowerCase()}`;
@@ -169,13 +169,13 @@ const FlipCard = ({ data }) => {
             <p className="absolute bg-yellow-100 text-purple-900 text-md text-center ml-1 mt-56 w-60 font-bold rounded shadow-sm">
               Valor: {data.price}
             </p>
-            <div className="flex gap-3 self-center mt-auto">
+            <div className="flex gap-5 self-center mt-auto">
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   setFlipped(false);
                 }}
-                className="bg-yellow-50 hover:bg-gray-300 font-bold text-purple-800 w-20 rounded-md transition-colors duration-200"
+                className="bg-yellow-50 hover:bg-gray-300 font-bold text-purple-800 w-28 rounded-md transition-colors duration-200"
               >
                 Voltar
               </button>
@@ -184,7 +184,7 @@ const FlipCard = ({ data }) => {
                   e.stopPropagation();
                   alert("Compra realizada!");
                 }}
-                className="bg-yellow-50 hover:bg-gray-300 font-bold text-purple-800 w-20 ml-4 rounded-md transition-colors duration-200"
+                className="bg-yellow-50 hover:bg-gray-300 font-bold text-purple-800 w-28  rounded-md transition-colors duration-200"
               >
                 Comprar
               </button>

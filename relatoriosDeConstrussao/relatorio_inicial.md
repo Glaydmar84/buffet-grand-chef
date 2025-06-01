@@ -204,3 +204,13 @@ Este relatório sintetiza a evolução, arquitetura e decisões de implementaç�
 Desenvolvido como parte do Trabalho de Conclusão de Curso (TCC) em Engenharia de Software.
 
 ---
+
+
+<!-- 1️⃣ App.js -->
+<!-- 2️⃣ Navbar.js -->
+3️⃣ CardCarousel.js (Home)
+4️⃣ Produtos.js
+5️⃣ Pacotes.js
+6️⃣ LoginModal.js
+7️⃣ RegisterModal.js
+8️⃣ Footer.js
