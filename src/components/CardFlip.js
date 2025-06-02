@@ -54,7 +54,7 @@ const FlipCard = ({ data }) => {
         <div className={`flip-card-inner ${flipped ? "flipped" : ""}`}>
 
           {/* FRONT */}
-          <div className="flip-card-front bg-[#fffaf4]/50 border-4 border-purple-300 shadow-lg rounded-lg p-4 h-[310px] flex flex-col justify-between">
+          <div className="flip-card-front bg-[#fffaf4]/50 border-4 border-purple-300 shadow-lg rounded-lg p-4 h-[300px] flex flex-col justify-between">
             <div className="  w-48 w-60 -ml-1 bg-purple-100 text-purple-800 text-sm font-bold py-1 px-3 rounded shadow-sm text-center">
               {data.title}
             </div>
@@ -175,7 +175,7 @@ const FlipCard = ({ data }) => {
                   e.stopPropagation();
                   setFlipped(false);
                 }}
-                className="bg-yellow-50 hover:bg-gray-300 font-bold text-purple-800 w-28 rounded-md transition-colors duration-200"
+                className="bg-yellow-50 hover:bg-gray-300 font-bold text-purple-800 ml-10 w-24  rounded-md transition-colors duration-200"
               >
                 Voltar
               </button>
@@ -184,9 +184,9 @@ const FlipCard = ({ data }) => {
                   e.stopPropagation();
                   alert("Compra realizada!");
                 }}
-                className="bg-yellow-50 hover:bg-gray-300 font-bold text-purple-800 w-28  rounded-md transition-colors duration-200"
+                className="bg-yellow-50 hover:bg-gray-300 font-bold text-purple-800 w-32  mr-10 rounded-md transition-colors duration-200"
               >
-                Comprar
+             Realizar pedido
               </button>
             </div>
           </div>

@@ -62,7 +62,7 @@
 
 /* 🎯 Estilo da paginação (bolinhas) */
 .swiper-pagination {
-  bottom: 20px !important; /* 🔼 Sobe as bolinhas (antes padrão é ~10px) */
+  bottom: 50px !important; /* 🔼 Sobe as bolinhas (antes padrão é ~10px) */
 }
 
 .swiper-pagination-bullet {
@@ -75,7 +75,7 @@
   background-color: #f1f0b6;
   padding: 05px 25px;
   border-radius: 8px;
-   margin: 0 19px;
+   margin: 0 14px;
  
  
   
